@@ -1,4 +1,5 @@
 import React from 'react';
+import Name from './Name.jsx';
 
 class App  extends React.Component {
   constructor(props) {
@@ -10,7 +11,8 @@ class App  extends React.Component {
     console.log('hi from app component');
     return (
       <div>
-        Name
+        <Name />
+        <p>Profile Picture</p>
       <p>
         navbar
       </p>
