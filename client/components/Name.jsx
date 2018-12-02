@@ -1,11 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const Name = (props) => {
   return (
-    <div class="name">
+    <X className="name">
     Peter Park
-    </div>
+    </X>
   )
 }
+
+const X = styled.h1 `
+  font-size: 50px
+  font-family: Tahoma, Geneva, sans-serif;
+  text-align: center;
+`
 
 export default Name;

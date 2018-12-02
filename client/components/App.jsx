@@ -1,5 +1,8 @@
 import React from 'react';
 import Name from './Name.jsx';
+import About from './About.jsx';
+import Navbar from './Navbar.jsx';
+import Picture from './Picture.jsx';
 
 class App  extends React.Component {
   constructor(props) {
@@ -12,13 +15,14 @@ class App  extends React.Component {
     return (
       <div>
         <Name />
-        <p>Profile Picture</p>
-      <p>
-        navbar
-      </p>
+        <div>
+        <Picture />
+        </div>
+      <Navbar />
       <p>
         Header
       </p>
+      <About />
       </div>
     );
   }
