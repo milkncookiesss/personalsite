@@ -10,7 +10,7 @@ const Name = (props) => {
 }
 
 const X = styled.h1 `
-  font-size: 50px
+  font-size: 30px
   font-family: Tahoma, Geneva, sans-serif;
   text-align: center;
 `
