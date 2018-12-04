@@ -13,7 +13,7 @@ const Image = styled.img `
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 20%;
+  width: 15%;
   border-radius: 50%;
 `
 export default Picture;

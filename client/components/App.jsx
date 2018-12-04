@@ -2,6 +2,7 @@ import React from 'react';
 import Name from './Name.jsx';
 import About from './About.jsx';
 import Navbar from './Navbar.jsx';
+import Contact from './Contact.jsx';
 import Picture from './Picture.jsx';
 import styled from 'styled-components';
 
@@ -13,27 +14,29 @@ class App  extends React.Component {
 
   render() {
     return (
-      <div>
-        <Name />
+      <Profile>
         <div>
-        <Picture />
+          <Name />
         </div>
-      <Navbar />
+        <div>
+          <Picture />
+        </div>
+        <div>
+          <Contact />
+        </div>
+        <div>
+          <About />
+        </div>
       <p>
         Header
       </p>
-      <AboutStyle>
-      <About />
-      </AboutStyle>
-      </div>
+      </Profile>
     );
   }
 }
 
-const AboutStyle = styled.div `
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-`
+const Profile = styled.div `
+  background: ;
+`;
 
 export default App;
