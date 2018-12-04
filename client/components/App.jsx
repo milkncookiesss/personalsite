@@ -2,8 +2,9 @@ import React from 'react';
 import Name from './Name.jsx';
 import About from './About.jsx';
 import Navbar from './Navbar.jsx';
-import Contact from './Contact.jsx';
 import Picture from './Picture.jsx';
+import Contact from './Contact.jsx';
+import Applications from './Applications.jsx';
 import styled from 'styled-components';
 
 class App  extends React.Component {
@@ -26,6 +27,9 @@ class App  extends React.Component {
         </div>
         <div>
           <About />
+        </div>
+        <div>
+          <Applications />
         </div>
       <p>
         Header
