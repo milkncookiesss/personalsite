@@ -4,12 +4,12 @@ import styled from 'styled-components';
 const Applications = (props) => {
   return (
     <Slideshow className="slideshow-container">
-      <div width="500px">
         <Slide className="imageSlide" src="https://s3-us-west-2.amazonaws.com/peter-park-portfolio-img/FEC-ss.png">
         </Slide>
-      </div>
-      <Arrowsprev onClick={() => {props.onClick(-1)}} width="200px">&#10094;</Arrowsprev>
-      <Arrowsnext onClick={() => {props.onClick(1)}} width="200px">&#10095;</Arrowsnext>
+        <Slide className="imageSlide" src="https://s3-us-west-2.amazonaws.com/peter-park-portfolio-img/1800+test.png">
+        </Slide>
+      <Arrowsprev onClick={() => {props.onClick(-1)}}>&#10094;</Arrowsprev>
+      <Arrowsnext onClick={() => {props.onClick(1)}}>&#10095;</Arrowsnext>
     </Slideshow>
     
   );
@@ -18,7 +18,6 @@ const Applications = (props) => {
 /*
   >each slide will be display:none
   >depending on slideindex at app, img's display: none will change to display: block
-
 */
 
 const Slideshow = styled.div `
@@ -35,13 +34,13 @@ const Slide = styled.img `
 const Arrowsprev = styled.a `
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 75%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: red;
+  color: #3BA7C4;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 50px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -52,13 +51,13 @@ const Arrowsprev = styled.a `
 const Arrowsnext = styled.a `
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 75%;
   width: auto;
   margin-top: -22px;
   padding: 16px;
-  color: red;
+  color: #3BA7C4;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 50px;
   transition: 0.6s ease;
   right: 0;
   border-radius: 3px 0 0 3px;

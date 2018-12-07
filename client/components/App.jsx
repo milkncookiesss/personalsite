@@ -20,21 +20,24 @@ class App  extends React.Component {
   componentDidMount() {
     this.showSlide(this.state.slideIndex);
   }
-  
+  //bug in showSlides
+  //conditionals are not doing what they are suppose to
+  //fix this shit you ding dong
   showSlide(slideIndex) {
-    console.log('inside the showSide function');
-    let i;
+    let index = slideIndex;
     let slides = document.getElementsByClassName('imageSlide');
-    if (slideIndex > slides.length) {
-      slideIndex = 1;
+    console.log(slides.length);
+    console.log('the index ' , index);
+    if (index > slides.length) {
+      index = 1;
     }
-    if (slideIndex < 1) {
-      slideIndex = slides.length;
+    if (index < 1) {
+      index = slides.length;
     }
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = 'none';
     }
-    slides[slideIndex - 1].style.display = 'block';
+    slides[index - 1].style.display = 'block';
   }
   
   handleClick(check) {
