@@ -5,19 +5,31 @@ const Applications = (props) => {
   return (
     <Slideshow className="slideshow-container">
       <div width="500px">
-        {props.number}
+        <Slide className="imageSlide" src="https://s3-us-west-2.amazonaws.com/peter-park-portfolio-img/FEC-ss.png">
+        </Slide>
       </div>
-      <Arrowsprev onClick={() => {props.onClick('prev')}} width="200px">&#10094;</Arrowsprev>
-      <Arrowsnext onClick={() => {props.onClick('next')}} width="200px">&#10095;</Arrowsnext>
+      <Arrowsprev onClick={() => {props.onClick(-1)}} width="200px">&#10094;</Arrowsprev>
+      <Arrowsnext onClick={() => {props.onClick(1)}} width="200px">&#10095;</Arrowsnext>
     </Slideshow>
     
   );
 }
 
+/*
+  >each slide will be display:none
+  >depending on slideindex at app, img's display: none will change to display: block
+
+*/
+
 const Slideshow = styled.div `
   max-width: 1000px;
   position: relative;
   margin: auto;
+`;
+
+const Slide = styled.img `
+  display: none;
+  width: 100%;
 `;
 
 const Arrowsprev = styled.a `
@@ -55,9 +67,11 @@ const Arrowsnext = styled.a `
     background-color: rgba(0,0,0,0.4);
   }
 `;
+
 /*
   //change a tags to styled.a
   //make them buttons with hover over background color
   //replace {props.number} with images
 */
+
 export default Applications;

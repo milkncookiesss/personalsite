@@ -11,21 +11,34 @@ class App  extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: 0
+      slideIndex: 1
     }
     this.handleClick = this.handleClick.bind(this);
+    this.showSlide = this.showSlide.bind(this);
+  }
+  
+  componentDidMount() {
+    this.showSlide(this.state.slideIndex);
+  }
+  
+  showSlide(slideIndex) {
+    console.log('inside the showSide function');
+    let i;
+    let slides = document.getElementsByClassName('imageSlide');
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    if (slideIndex < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+    slides[slideIndex - 1].style.display = 'block';
   }
   
   handleClick(check) {
-    if (check === 'next') {
-      this.setState({
-        number: this.state.number + 1
-      });
-    } else if (check === 'prev') {
-      this.setState({
-        number: this.state.number - 1
-      });
-    }
+    this.showSlide(this.state.slideIndex += check);
   }
 
   render() {
@@ -44,7 +57,7 @@ class App  extends React.Component {
           <About />
         </div>
         <div>
-          <Applications number={this.state.number} onClick={this.handleClick}/>
+          <Applications number={this.state.slideIndex} onClick={this.handleClick}/>
         </div>
       <p>
         Header
