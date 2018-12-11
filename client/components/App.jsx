@@ -4,8 +4,8 @@ import About from './About.jsx';
 import Navbar from './Navbar.jsx';
 import Picture from './Picture.jsx';
 import Contact from './Contact.jsx';
-import Applications from './Applications.jsx';
 import styled from 'styled-components';
+import Applications from './Applications.jsx';
 
 class App  extends React.Component {
   constructor(props) {
@@ -21,12 +21,11 @@ class App  extends React.Component {
     this.showSlide(this.state.slideIndex);
   }
 
-  //bug in showSlides
-  //conditionals are not doing what they are suppose to
-  //fix this shit you ding dong
+//need to press forward twice to move to next image
 
   showSlide(slideIndex) {
     let slides = document.getElementsByClassName('imageSlide');
+
     this.setState({
       slideIndex: slideIndex
     });
