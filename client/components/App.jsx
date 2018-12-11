@@ -13,35 +13,45 @@ class App  extends React.Component {
     this.state = {
       slideIndex: 1
     }
-    this.handleClick = this.handleClick.bind(this);
+    this.prevOrNext = this.prevOrNext.bind(this);
     this.showSlide = this.showSlide.bind(this);
   }
   
   componentDidMount() {
     this.showSlide(this.state.slideIndex);
   }
+
   //bug in showSlides
   //conditionals are not doing what they are suppose to
   //fix this shit you ding dong
+
   showSlide(slideIndex) {
-    let index = slideIndex;
     let slides = document.getElementsByClassName('imageSlide');
-    console.log(slides.length);
-    console.log('the index ' , index);
-    if (index > slides.length) {
-      index = 1;
+    this.setState({
+      slideIndex: slideIndex
+    });
+    
+    if (slideIndex > slides.length) {
+      this.setState({
+        slideIndex: 1
+      });
+      console.log('the state ', this.state.slideIndex)
     }
-    if (index < 1) {
-      index = slides.length;
+    if (slideIndex < 1) {
+      this.setState({
+        slideIndex: slides.length
+      });
     }
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = 'none';
     }
-    slides[index - 1].style.display = 'block';
+    console.log('the index before execute ', this.state.slideIndex);
+    slides[this.state.slideIndex - 1].style.display = 'block';
   }
   
-  handleClick(check) {
-    this.showSlide(this.state.slideIndex += check);
+  prevOrNext(check) {
+    console.log('the slide index in prevOrNext ', this.state.slideIndex + check);
+    this.showSlide(this.state.slideIndex + check);
   }
 
   render() {
@@ -60,7 +70,7 @@ class App  extends React.Component {
           <About />
         </div>
         <div>
-          <Applications number={this.state.slideIndex} onClick={this.handleClick}/>
+          <Applications number={this.state.slideIndex} onClick={this.prevOrNext}/>
         </div>
       <p>
         Header
