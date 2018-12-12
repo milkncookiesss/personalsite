@@ -9,7 +9,7 @@ const Applications = (props) => {
         </Slide>
         <FecHoverContainer>
           <FecText>
-              With a team of engineers, we built out a KickerStarter project page with React as our Front-end Library.  
+              With a team of engineers, we built out a KickerStarter project page with React as our Front-end Library.  As a team we designed our site to be able to seamlessly render all our modules on a single webpage.
           </FecText>
         </FecHoverContainer>
       </FecContainer>
@@ -18,7 +18,7 @@ const Applications = (props) => {
         </Slide>
         <SdcHoverContainer>
           <SdcText>
-            rewq
+            Built out a database that could hold 10 million records of comments and users.  Reduced look up time through the database from 1 minute 50 seconds down to 4 seconds.  Deployed database using AWS EC2 instances and tested to make sure module can handle large requests per second.  
           </SdcText>
         </SdcHoverContainer>
       </SdcContainer>
