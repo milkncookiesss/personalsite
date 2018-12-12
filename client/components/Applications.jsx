@@ -4,24 +4,27 @@ import styled from 'styled-components';
 const Applications = (props) => {
   return (
     <Slideshow className="slideshow-container">
-      <HoverTextFEC>
+      <FecContainer>
         <Slide className="imageSlide" src="https://s3-us-west-2.amazonaws.com/peter-park-portfolio-img/FEC-ss.png">
         </Slide>
-        {/* <TextLayer className="descriptionFEC"> */}
-        <DisplayDescript className="descriptionFEC">test test test</DisplayDescript>
-        {/* </TextLayer> */}
-      </HoverTextFEC>
-      <HoverTextSDC>
+        <FecHoverContainer>
+          <FecText>
+              With a team of engineers, we built out a KickerStarter project page with React as our Front-end Library.  
+          </FecText>
+        </FecHoverContainer>
+      </FecContainer>
+      <SdcContainer>
         <Slide className="imageSlide" src="https://s3-us-west-2.amazonaws.com/peter-park-portfolio-img/1800+test.png">
         </Slide>
-        {/* <TextLayer className="descriptionSDC"> */}
-        <DisplayDescript className="descriptionSDC">test one two test</DisplayDescript>
-        {/* </TextLayer> */}
-      </HoverTextSDC>
-      <Arrowsprev onClick={() => {props.onClick(-1)}}>&#10094;</Arrowsprev>
+        <SdcHoverContainer>
+          <SdcText>
+            rewq
+          </SdcText>
+        </SdcHoverContainer>
+      </SdcContainer>
       <Arrowsnext onClick={() => {props.onClick(1)}}>&#10095;</Arrowsnext>
+      <Arrowsprev onClick={() => {props.onClick(-1)}}>&#10094;</Arrowsprev>
     </Slideshow>
-    
   );
 }
 
@@ -37,61 +40,88 @@ const Slide = styled.img `
   width: 100%;
 `;
 
-const HoverTextFEC = styled.div `
-  &:hover .descriptionFEC {
-    display: block;
-    opacity: 100;
-    background-color: rgba(0,0,0,0.2);
-    -moz-transition: opacity .25s ease-in;
-    -webkit-transition: opacity .25s ease-in;
-    -o-transition: opacity .25s ease-in;
-    transition: opacity .25s ease-in;
-  }
-  `;
-  
-  const HoverTextSDC = styled.div `
-  &:hover .descriptionSDC {
-    display: block;
-    opacity: 100;
-    background-color: rgba(0,0,0,0.2);
-    -moz-transition: opacity .25s ease-in;
-    -webkit-transition: opacity .25s ease-in;
-    -o-transition: opacity .25s ease-in;
-    transition: opacity .25s ease-in;
-  }
-  `;
+const FecContainer = styled.div `
+position: relative;
+display: inline-block;
+overflow: hidden;
+width: 100%;
+height: auto;
+`;
 
-  // const TextLayer = styled.div `
-  // opacity: 0;
-	// position: absolute;
-	// top: 0;
-	// left: 0;
-	// right: 0;
-	// bottom: 0;
-	// width: 100%;
-	// height: 100%;
-	// background: rgba(0, 0, 0, 0.25);
-	// color: #fff;
-	// padding: 15px;
-	// -moz-transition: all 0.4s ease-in-out 0s;
-	// -webkit-transition: all 0.4s ease-in-out 0s;
-	// -ms-transition: all 0.4s ease-in-out 0s;
-	// transition: all 0.4s ease-in-out 0s;
-  // `;
+const SdcContainer = styled.div `
+position: relative;
+display: inline-block;
+overflow: hidden;
+width: 100%;
+height: auto;
+`;
 
-  const DisplayDescript = styled.div `
-  opacity: 0;
-  text-align: center;
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  color: red;
+const FecHoverContainer = styled.div `
+opacity: 0;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.6);
+color: #fff;
+padding: 15px;
+-moz-transition: all 0.4s ease-in-out 0s;
+-webkit-transition: all 0.4s ease-in-out 0s;
+-ms-transition: all 0.4s ease-in-out 0s;
+transition: all 0.4s ease-in-out 0s;
+&:hover {
+  opacity: 1;
+}
+`;
+
+const SdcHoverContainer = styled.div `
+opacity: 0;
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.6);
+color: #fff;
+padding: 15px;
+-moz-transition: all 0.4s ease-in-out 0s;
+-webkit-transition: all 0.4s ease-in-out 0s;
+-ms-transition: all 0.4s ease-in-out 0s;
+transition: all 0.4s ease-in-out 0s;
+&:hover {
+  opacity: 1;
+}
+`;
+
+const FecText = styled.div `
+text-align: left;
+font-size: 18px;
+display: inline-block;
+position: absolute;
+top: 50%;
+left: 50%;
+-moz-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+`;
+
+const SdcText = styled.div `
+text-align: center;
+font-size: 18px;
+display: inline-block;
+position: absolute;
+top: 50%;
+left: 50%;
+-moz-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
 `;
 
 const Arrowsprev = styled.a `
@@ -105,12 +135,14 @@ const Arrowsprev = styled.a `
   font-weight: bold;
   font-size: 50px;
   transition: 0.6s ease;
+  left: 0;
   border-radius: 0 3px 3px 0;
   user-select: none;
   &:hover {
     background-color: rgba(0,0,0,0.4);
   }
 `;
+
 const Arrowsnext = styled.a `
   cursor: pointer;
   position: absolute;
