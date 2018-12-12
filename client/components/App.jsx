@@ -53,6 +53,13 @@ class App  extends React.Component {
     this.showSlide(this.state.slideIndex + check);
   }
 
+  hoverProject() {
+    /*
+      hover over image of project and get a blow up image of project
+      next to image will be description of project
+    */
+  }
+
   render() {
     return (
       <Profile>
@@ -72,7 +79,6 @@ class App  extends React.Component {
           <Applications number={this.state.slideIndex} onClick={this.prevOrNext}/>
         </div>
       <p>
-        Header
       </p>
       </Profile>
     );
