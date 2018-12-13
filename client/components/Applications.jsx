@@ -30,7 +30,7 @@ const Applications = (props) => {
 
 
 const Slideshow = styled.div `
-  max-width: 50%;
+  max-width: 60%;
   position: relative;
   margin: auto;
 `;
