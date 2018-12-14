@@ -8,8 +8,8 @@ LABEL author="Peter Park"
 
 RUN npm install
 
-COPY ..
+COPY . .
 
-EXPOSE 1337
+EXPOSE 80
 
 CMD ["npm", "start"]
