@@ -6,16 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./server/index.js",
-    "build": "webpack -w"
+    "build-dev": "webpack --mode development -w"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "7.1.5",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "helmet": "^3.15.0",
@@ -23,11 +19,17 @@
     "path": "^0.12.7",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "styled-components": "^4.1.2",
-    "webpack": "^4.26.1",
-    "webpack-cli": "^3.1.2"
+    "styled-components": "^4.1.2"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.9.2"
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.9.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
   }
 }

@@ -1,38 +1,38 @@
 const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, './client'),
+  entry: path.join(__dirname, 'client/index.jsx'),
   output: {
-    path: path.resolve(__dirname, './static'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: path.join(__dirname, 'static')
   },
-  mode: 'development',
   module: {
     rules: [
       {
-        test: /\.js[x]?/,
-        loader: 'babel-loader',
-        exclude: /(node_modules|dep)/,
-        options: {
-          presets: ['react', 'env']
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/react']
+          }
         }
       },
-      { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
-      {
-        test: /\.css$/,
-        use: [{
-          loader: 'style-loader'
-        }, {
-          loader: 'css-loader',
-          options: {
-            modules: true
-          }
-        }],
-        // include: __dirname + '/client'
-      }
+      // {
+      //   test: /\.es6$/, 
+      //   exclude: /node_modules/,
+      //   use: [
+      //     {
+      //       loader: 'babel-loader',
+      //       query: {
+      //         presets: ['@babel/preset-env']
+      //       }
+      //     }
+      //   ]
+      // },
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.es6']
   }
-};
+}
