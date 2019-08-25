@@ -13,45 +13,45 @@ class App  extends React.Component {
     this.state = {
       slideIndex: 1
     }
-    this.prevOrNext = this.prevOrNext.bind(this);
-    this.showSlide = this.showSlide.bind(this);
+    // this.prevOrNext = this.prevOrNext.bind(this);
+    // this.showSlide = this.showSlide.bind(this);
   }
   
   componentDidMount() {
-    this.showSlide(this.state.slideIndex);
+    // this.showSlide(this.state.slideIndex);
   }
 
 //need to press forward twice to move to next image
 
-  showSlide(slideIndex) {
-    let slides = document.getElementsByClassName('imageSlide');
+  // showSlide(slideIndex) {
+  //   let slides = document.getElementsByClassName('imageSlide');
 
-    this.setState({
-      slideIndex: slideIndex
-    });
+  //   this.setState({
+  //     slideIndex: slideIndex
+  //   });
     
-    if (slideIndex > slides.length) {
-      this.setState({
-        slideIndex: 1
-      });
-      console.log('the state ', this.state.slideIndex)
-    }
-    if (slideIndex < 1) {
-      this.setState({
-        slideIndex: slides.length
-      });
-    }
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = 'none';
-    }
-    console.log('the index before execute ', this.state.slideIndex);
-    slides[this.state.slideIndex - 1].style.display = 'block';
-  }
+  //   if (slideIndex > slides.length) {
+  //     this.setState({
+  //       slideIndex: 1
+  //     });
+  //     console.log('the state ', this.state.slideIndex)
+  //   }
+  //   if (slideIndex < 1) {
+  //     this.setState({
+  //       slideIndex: slides.length
+  //     });
+  //   }
+  //   for (let i = 0; i < slides.length; i++) {
+  //     slides[i].style.display = 'none';
+  //   }
+  //   console.log('the index before execute ', this.state.slideIndex);
+  //   slides[this.state.slideIndex - 1].style.display = 'block';
+  // }
   
-  prevOrNext(check) {
-    console.log('the slide index in prevOrNext ', this.state.slideIndex + check);
-    this.showSlide(this.state.slideIndex + check);
-  }
+  // prevOrNext(check) {
+  //   console.log('the slide index in prevOrNext ', this.state.slideIndex + check);
+  //   this.showSlide(this.state.slideIndex + check);
+  // }
 
   hoverProject() {
     /*
