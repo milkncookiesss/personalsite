@@ -6,6 +6,7 @@ import Picture from './Picture.jsx';
 import Contact from './Contact.jsx';
 import styled from 'styled-components';
 import Applications from './Applications.jsx';
+import WorkExperience from './WorkExperience.jsx';
 
 class App  extends React.Component {
   constructor(props) {
@@ -63,23 +64,25 @@ class App  extends React.Component {
   render() {
     return (
       <Profile>
-        <div>
+        <ul>
           <Name />
-        </div>
-        <div>
+        </ul>
+        <ul>
           <Picture />
-        </div>
-        <div>
+        </ul>
+        <ul>
           <Contact />
-        </div>
-        <div>
+        </ul>
+        <ul>
           <About />
-        </div>
-        <div>
+        </ul>
+        <br />
+        <ul>
           <Applications />
-        </div>
-      <p>
-      </p>
+        </ul>
+        <ul>
+          <WorkExperience />
+        </ul>
       </Profile>
     );
   }
