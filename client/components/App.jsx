@@ -76,7 +76,7 @@ class App  extends React.Component {
           <About />
         </div>
         <div>
-          <Applications number={this.state.slideIndex} onClick={this.prevOrNext}/>
+          <Applications />
         </div>
       <p>
       </p>
