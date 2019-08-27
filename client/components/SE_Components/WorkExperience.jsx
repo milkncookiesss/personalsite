@@ -42,10 +42,12 @@ const Title = styled.div`
 `
 
 const ImgContainer = styled.div`
+  margin-top: 15px;
   display: flex;
   flex-direction: row;
 `
 const TextContainer = styled.ul`
+  margin-left: -50px;
   display: flex;
   flex-direction: column;
 `
@@ -56,6 +58,8 @@ const Text = styled.ul`
 `
 
 const Slide = styled.img `
+  border: 2px solid black;
+  border-radius: 2px;
   display: flex;
   flex-direction: row;
   width: 50%;

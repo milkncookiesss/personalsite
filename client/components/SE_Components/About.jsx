@@ -5,17 +5,18 @@ const About = (props) => {
   return (
     <Aboot>
       <p>
-        I am a Full-stack engineer looking to bring better experiences to users.  Continuously wanting to learn new tech while impoving my own knonwledge of the current technologies I know.  
+        Restaurant industry veteran who decided in wanting a career that requires more problem solving scenarios.  Being self taught and graduating at a three month immersive program, I became a certified Full Stack Engineer.  I always want to keep learning and challenging myself to take on more challenging problems every day.
       </p>
     </Aboot>
   );
 }
 
 const Aboot = styled.div `
-  background: ;
+  display: block;
   font-size: 25px;
   margin-left: 25%;
   margin-right: 25%;
+  text-allign: center;
 `;
 
 export default About;

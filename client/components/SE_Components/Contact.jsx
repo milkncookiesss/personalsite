@@ -11,7 +11,7 @@ const Contact = (props) => {
       <Linkedin src="https://s3-us-west-2.amazonaws.com/peter-park-portfolio-img/2000px-LinkedIn_logo_In-Black.svg.png"></Linkedin>
       </a>
       <a href="https://www.twitter.com/milkncookiessss" target="_blank">
-      <Twitter src="https://s3-us-west-2.amazonaws.com/peter-park-portfolio-img/512px-Icon_Twitter.svg.png"></Twitter>
+      <Twitter src="https://peter-park-portfolio-img.s3-us-west-2.amazonaws.com/twitter-icon-black-and-white-22.jpg"></Twitter>
       </a>
     </div>
   )

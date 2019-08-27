@@ -26,11 +26,9 @@ const App = (props) => {
         </ul>
         <br />
         <Technology />
-        <br />
         <ul>
           <WorkExperience />
         </ul>
-        <br />
         <ul>
           <Applications />
         </ul>

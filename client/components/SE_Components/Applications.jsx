@@ -8,9 +8,7 @@ const Applications = (props) => {
         Software Engineering Applications
       </Title>
       <ImgContainer>
-        <a href='https://www.google.com'>
-        <Slide src="https://s3-us-west-2.amazonaws.com/peter-park-portfolio-img/FEC-ss.png"/>
-        </a>
+        <Slide src="https://s3-us-west-2.amazonaws.com/peter-park-portfolio-img/FEC-ss.png" />
           <TextContainer>
             <br />
           <Text>
@@ -38,9 +36,7 @@ will have their own microservice.
       </ImgContainer>
       <br />
       <ImgContainer>
-      <a href='https://www.google.com'>
         <Slide src="https://s3-us-west-2.amazonaws.com/peter-park-portfolio-img/1800+test.png" />
-      </a>
         <TextContainer>
           <br />
         <Text>
@@ -71,10 +67,12 @@ const Title = styled.div`
 `
 
 const ImgContainer = styled.div`
+  margin-top: 15px;
   display: flex;
   flex-direction: row;
 `
 const TextContainer = styled.ul`
+  margin-left: -50px;
   display: flex;
   flex-direction: column;
 `
@@ -85,9 +83,11 @@ const Text = styled.ul`
 `
 
 const Slide = styled.img `
+  border: 2px solid black;
+  border-radius: 2px;
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 50%;
 `
 
 export default Applications;
