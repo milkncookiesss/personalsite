@@ -1,7 +1,13 @@
 # Personalsite
 
 ## Description
->Personal page
-React.js, Express, Node.js
 
-its a glorified resume
+Glorified Resume.
+
+## Tech
+React.js
+Node
+Express
+Styled Components
+Deployed on Heroku
+[site](https://still-anchorage-55497.herokuapp.com/)
