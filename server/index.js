@@ -3,7 +3,7 @@ const parser = require('body-parser');
 const path = require('path');
 const helmet = require('helmet');
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.use(helmet());
 app.use(parser.json());
