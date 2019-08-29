@@ -17,6 +17,18 @@ const Aboot = styled.div `
   margin-left: 25%;
   margin-right: 25%;
   text-allign: center;
+  @media (max-width: 414px) {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 20px;
+    flex-flow: row wrap;
+  }
+  @media (max-width: 360px) {
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 15px;
+    flex-flow: row wrap;
+  }
 `;
 
 export default About;

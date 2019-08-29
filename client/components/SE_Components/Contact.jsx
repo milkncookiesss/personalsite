@@ -17,6 +17,7 @@ const Contact = (props) => {
   )
 }
 
+
 const Github = styled.img `
   width: 5%;
   margin-left: 27%;

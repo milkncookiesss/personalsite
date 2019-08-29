@@ -13,7 +13,7 @@ const Technology = (props) => {
         <img src="https://img.icons8.com/color/96/000000/mongodb.png" />
         <img src="https://img.icons8.com/color/96/000000/mysql.png" />
         <img src="https://img.icons8.com/color/96/000000/postgreesql.png" />
-        <img src="https://img.icons8.com/color/96/000000/firebase.png" />
+        <img src="https://img.icons8.com/color/96/000000/heroku.png" />
         <img src="https://img.icons8.com/color/96/000000/amazon-web-services.png" />
         <img src="https://img.icons8.com/color/96/000000/docker.png" />
     </Tech>
@@ -23,6 +23,9 @@ const Technology = (props) => {
 const Tech = styled.div`
   display: flex;
   justify-content: center;
+  @media (max-width: 1024px) {
+    flex-flow: row wrap;
+  }
 `
 
 export default Technology;

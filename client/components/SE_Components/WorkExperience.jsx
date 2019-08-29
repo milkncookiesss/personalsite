@@ -45,6 +45,10 @@ const ImgContainer = styled.div`
   margin-top: 15px;
   display: flex;
   flex-direction: row;
+  @media (max-width: 1024px) {
+    width: 100%;
+    flex-flow: column; 
+  }
 `
 const TextContainer = styled.ul`
   margin-left: -50px;
@@ -55,6 +59,9 @@ const TextContainer = styled.ul`
 const Text = styled.ul`
   display: block;
   font-size: 25px;
+  @media(max-width: 1024px) {
+    font-size: 15px;
+  }
 `
 
 const Slide = styled.img `
